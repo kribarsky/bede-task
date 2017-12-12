@@ -5,5 +5,7 @@ HTTParty
 Rspec
 Cucumber
 
-In case you run the whole test suit access token will be obtained and used further in the test
-In case you run features individually you need to obtain an access token and update @access_token variable in commont_steps.rb @ line 15
+You can do that with 'bundle install' command
+
+To run each feature file individually you need to update the 'access_token' file with a valid access_token
+To run all features use 'bundle exec cucumber'
