@@ -8,12 +8,7 @@ Given 'I have Base URL, Endpoints and access_token' do
   @endpoint3 = 'things/get'
   @endpoint4 = 'thing/delete'
   @response = nil
-
-  if @new_token then
-    @access_token = @new_token
-  else
-    @access_token = '608e982ed0344e06dd9af95569e4a0ef2a254b79'
-  end
+  @access_token ||= File.read('features/access_token').strip
 end
 
 When "I execute a {string} request to {string}" do |method, endpoint|

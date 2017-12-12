@@ -22,5 +22,5 @@ end
 Then 'I expect to receive new access token' do
   @parsed_response = JSON.parse(@response.body)
   expect(@parsed_response['access_token']).not_to be(nil)
-  @new_token = @parsed_response['access_token']
+  p @parsed_response
 end
